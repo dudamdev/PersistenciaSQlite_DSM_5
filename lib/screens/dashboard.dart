@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:projetopersistencia/screens/contacts_list.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: const Color.fromRGBO(0, 48, 92, 1),
-            title: const Text(
-              'Dashboard',
-              style: TextStyle(color: Colors.white, fontSize: 28),
-            ),
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromRGBO(0, 48, 92, 1),
+          title: const Text(
+            'Dashboard',
+            style: TextStyle(color: Colors.white, fontSize: 28),
           ),
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('images/bb.png'),
-              ),
-              
-              Padding(
-                
-                padding: const EdgeInsets.all(8.0),
-                
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/bb.png'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const ContactsList(),
+                    ),
+                  );
+                },
                 child: Container(
                     height: 100,
                     width: 150,
@@ -47,8 +51,9 @@ class Dashboard extends StatelessWidget {
                       ),
                     )),
               ),
-            ],
-          )),
-    );
+            ),
+          ],
+        ),
+      );
   }
 }
