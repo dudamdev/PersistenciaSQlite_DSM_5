@@ -8,6 +8,7 @@ class ContactsList extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(0, 48, 92, 1),
+          iconTheme: const IconThemeData(color: Colors.white),
           title: const Text(
             'Contatos',
             style: TextStyle(color: Colors.white, fontSize: 28),
