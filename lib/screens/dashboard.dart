@@ -3,7 +3,7 @@ import 'package:projetopersistencia/screens/contacts_list.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
